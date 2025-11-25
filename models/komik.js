@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const komiks = sequelize.define("komiks", {
+ 
+    const Komik = sequelize.define("Komik", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -17,8 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         imageType: DataTypes.STRING,
         imageName: DataTypes.STRING,
         imageData: DataTypes.BLOB("long"),
-    }
-);
+    });
 
-    return komiks;
+    return Komik;
 }
